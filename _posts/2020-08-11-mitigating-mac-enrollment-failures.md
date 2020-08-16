@@ -22,7 +22,7 @@ After consulting the Google machine it turns out others had the same problem.
 
 [https://www.jamf.com/jamf-nation/discussions/33723/catalina-prestage-enrollment-retrieving-activation-record-hanging](https://www.jamf.com/jamf-nation/discussions/33723/catalina-prestage-enrollment-retrieving-activation-record-hanging)
 
-Not only was this impacting others, it had been a known issue since October 2019. Another colleague I spoke to had reported the bug to Apple in Feburary 2020. Great, a longstanding bug affecting enrollment and Apple has effectively not shipped a fix for six point releases. Most comments in the Jamf Nation thread pointed to a post by Graham Pugh. 
+Not only was this impacting others, it had been a known issue since October 2019. Another colleague I spoke to had reported the bug to Apple in February 2020. Great, a longstanding bug affecting enrollment and Apple has effectively not shipped a fix for six point releases. Most comments in the Jamf Nation thread pointed to a post by Graham Pugh. 
 
 [https://grahamrpugh.com/2020/02/21/resetting-dep-without-reinstalling.html](https://grahamrpugh.com/2020/02/21/resetting-dep-without-reinstalling.html)
 
@@ -108,7 +108,7 @@ I wrote the best mitigation script I could within time constraints. The script w
 7. Rinse and repeat for 10 cycles (configurable) until the Mac finally gets an enrollment configuration. 
 8. If after all cycles complete and the Mac still can't get its config, print a message recommending it be shut down for 10 minutes and then try again.
 
-The time savings comes in that the script is run as root with an accompanying launch daemon. There's no need to get a root Terminal session or run commands manually. Here's an example of the script's log output. In my environment getting an enrollment configuration almost always succeded on cycle 2, retry 1 - the 4th attempt about 2-3 minutes after boot.
+The time savings comes in that the script is run as root with an accompanying launch daemon. There's no need to get a root Terminal session or run commands manually. Here's an example of the script's log output. In my environment getting an enrollment configuration almost always succeeded on cycle 2, retry 1 - the 4th attempt about 2-3 minutes after boot.
 
 {% gist 86bca3bd2b361f97f7a48cfe3e56d07a %}
 
